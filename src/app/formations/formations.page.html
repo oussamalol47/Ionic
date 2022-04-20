@@ -1,0 +1,28 @@
+<ion-header>
+ 
+</ion-header>
+
+<ion-content padding >
+  <div *ngIf="nombreAchat">
+  <h2 color="white">Vous avez deja acheter une formation</h2> </div>
+<ion-grid >
+  <ion-row >
+      <ion-col size="6" *ngFor="let formation of formations;">
+          <ion-card  routerLink="/details/{{formation.nom}}" routerDirection="forward">
+              
+            <ion-card-header>
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              <ion-card-title>{{formation.nom}}</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content>
+              Keep close to Nature's heart... and break clear away, once in awhile,
+              and climb a mountain or spend a week in the woods. Wash your spirit clean.
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
+      
+  </ion-row>
+  
+</ion-grid>
+</ion-content>
